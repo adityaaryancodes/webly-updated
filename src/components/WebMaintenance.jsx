@@ -52,8 +52,8 @@ const WebMaintenance = () => {
             <h3 className="text-2xl font-bold text-white mb-6">Maintenance Plans</h3>
             <div className="space-y-4">
               {[
-                { plan: 'Essential', price: '$299/mo', desc: 'Backups, updates, monitoring' },
-                { plan: 'Professional', price: '$599/mo', desc: 'Everything + security audits' },
+                { plan: 'Essential', price: 'Custom', desc: 'Backups, updates, monitoring' },
+                { plan: 'Professional', price: 'Custom', desc: 'Everything + security audits' },
                 { plan: 'Enterprise', price: 'Custom', desc: 'Dedicated support & optimization' }
               ].map((item, idx) => (
                 <div key={idx} className="border border-purple-500/30 rounded-lg p-4 hover:border-purple-500 transition-colors">

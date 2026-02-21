@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import instagramIcon from '../assets/instagram.png';
 
 // Initialize EmailJS
 emailjs.init("1kg-NWTDjnF3LQdMv");
@@ -69,15 +70,34 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <h3 className="text-2xl font-semibold text-white mb-6">Contact Information</h3>
+
+            
             
             <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-pink-600/20 rounded-full flex items-center justify-center">
+                  <img src={instagramIcon} alt="Instagram" className="w-6 h-6 object-contain" />
+                </div>
+                <div>
+                  <p className="text-gray-400 text-sm">Instagram</p>
+                  <a
+                    href="https://www.instagram.com/weblytechh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white font-medium hover:text-pink-300 transition-colors"
+                  >
+                    @weblytechh
+                  </a>
+                </div>
+              </div>
+
               <div className="flex items-center gap-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-blue-600/20 rounded-full flex items-center justify-center">
                   <Mail className="w-6 h-6 text-blue-400" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Email</p>
-                  <p className="text-white font-medium">contact@webleytechnologies.com</p>
+                  <p className="text-white font-medium">weblytechnologiespvt.ltd@gmail.com</p>
                 </div>
               </div>
               
@@ -87,7 +107,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Mobile</p>
-                  <p className="text-white font-medium">+91 8384-0299-65</p>
+                  <p className="text-white font-medium">+91 80767 53004</p>
+                  <p className="text-white font-medium">+91 93110 84846</p>
                 </div>
               </div>
               
@@ -98,7 +119,7 @@ const Contact = () => {
                 <div>
                   <p className="text-gray-400 text-sm">Location</p>
                   <p className="text-white font-medium">Faridabad, Haryana</p>
-                  <p className="text-white font-medium">India - 121003</p>
+                  <p className="text-white font-medium">India - 121008</p>
                 </div>
               </div>
             </div>

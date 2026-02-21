@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import weblyLogo from '../assets/WhatsApp Image 2026-02-21 at 11.31.12.jpeg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,9 +11,14 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           
           {/* Logo - Extreme Left */}
-          <div className="flex-shrink-0 cursor-pointer">
+          <div className="flex-shrink-0 cursor-pointer flex items-center gap-3">
+            <img
+              src={weblyLogo}
+              alt="Webly Tech logo"
+              className="h-12 w-auto object-contain"
+            />
             <span className="text-2xl font-bold text-white tracking-tighter">
-              WEBLEY<span className="text-cyan-400">.TECH</span>
+              Webly<span className="text-cyan-400"> Tech</span>
             </span>
           </div>
 
@@ -27,9 +33,12 @@ const Navbar = () => {
                   {item}
                 </a>
               ))}
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all shadow-[0_0_15px_rgba(37,99,235,0.5)]">
+              <a
+                href="#contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all shadow-[0_0_15px_rgba(37,99,235,0.5)] inline-block"
+              >
                 Get Started
-              </button>
+              </a>
             </div>
           </div>
 
@@ -51,9 +60,13 @@ const Navbar = () => {
                 {item}
               </a>
             ))}
-            <button className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all">
+            <a
+              href="#contact"
+              onClick={() => setIsOpen(false)}
+              className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all block text-center"
+            >
               Get Started
-            </button>
+            </a>
           </div>
         </div>  
       )}

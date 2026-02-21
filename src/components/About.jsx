@@ -29,7 +29,7 @@ const About = () => {
             </div>
             
             <a href="#contact" className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-all shadow-lg hover:shadow-xl">
-              More About Us
+              Contact Us
               <ArrowRight className="w-5 h-5" />
             </a>
           </div>
