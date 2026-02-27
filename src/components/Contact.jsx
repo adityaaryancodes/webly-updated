@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import instagramIcon from '../assets/instagram.png';
 
@@ -97,7 +97,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Email</p>
-                  <p className="text-white font-medium">weblytechnologiespvt.ltd@gmail.com</p>
+                  <a
+                    href="mailto:weblytechnologiespvt.ltd@gmail.com"
+                    className="text-white font-medium hover:text-blue-300 transition-colors"
+                  >
+                    weblytechnologiespvt.ltd@gmail.com
+                  </a>
                 </div>
               </div>
               
@@ -107,8 +112,55 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Mobile</p>
-                  <p className="text-white font-medium">+91 80767 53004</p>
-                  <p className="text-white font-medium">+91 93110 84846</p>
+                  <div className="mt-1 space-y-3">
+                    <div>
+                      <div className="flex items-center justify-between gap-3">
+                        <p className="text-white font-medium">+91 80767 53004</p>
+                        <div className="flex items-center gap-2">
+                          <a
+                            href="tel:+918076753004"
+                            aria-label="Call +91 80767 53004"
+                            className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-cyan-500/30 bg-cyan-900/20 text-cyan-200 hover:border-cyan-300/60 hover:text-cyan-100 transition-colors"
+                          >
+                            <Phone className="w-4 h-4" />
+                          </a>
+                          <a
+                            href="https://wa.me/918076753004"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="WhatsApp +91 80767 53004"
+                            className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-cyan-500/30 bg-cyan-900/20 text-cyan-200 hover:border-cyan-300/60 hover:text-cyan-100 transition-colors"
+                          >
+                            <MessageCircle className="w-4 h-4" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="flex items-center justify-between gap-3">
+                        <p className="text-white font-medium">+91 93110 84846</p>
+                        <div className="flex items-center gap-2">
+                          <a
+                            href="tel:+919311084846"
+                            aria-label="Call +91 93110 84846"
+                            className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-cyan-500/30 bg-cyan-900/20 text-cyan-200 hover:border-cyan-300/60 hover:text-cyan-100 transition-colors"
+                          >
+                            <Phone className="w-4 h-4" />
+                          </a>
+                          <a
+                            href="https://wa.me/919311084846"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="WhatsApp +91 93110 84846"
+                            className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-cyan-500/30 bg-cyan-900/20 text-cyan-200 hover:border-cyan-300/60 hover:text-cyan-100 transition-colors"
+                          >
+                            <MessageCircle className="w-4 h-4" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               
@@ -118,7 +170,14 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Location</p>
-                  <p className="text-white font-medium">Faridabad, Haryana</p>
+                  <a
+                    href="https://maps.google.com/?q=Sector+28,Faridabad,Haryana,India+121008"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white font-medium hover:text-purple-300 transition-colors"
+                  >
+                    Sector 28, Faridabad, Haryana
+                  </a>
                   <p className="text-white font-medium">India - 121008</p>
                 </div>
               </div>

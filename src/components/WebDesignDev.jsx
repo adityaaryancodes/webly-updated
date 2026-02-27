@@ -1,6 +1,23 @@
 import React from 'react';
 import { Globe, ArrowRight } from 'lucide-react';
 
+const toolLogos = [
+  { name: 'React', logo: 'https://cdn.simpleicons.org/react/61DAFB' },
+  { name: 'Next.js', logo: 'https://cdn.simpleicons.org/nextdotjs/FFFFFF' },
+  { name: 'Express.js', logo: 'https://cdn.simpleicons.org/express/FFFFFF' },
+  { name: 'FastAPI', logo: 'https://cdn.simpleicons.org/fastapi/00C7B7' },
+  { name: 'Django', logo: 'https://cdn.simpleicons.org/django/44B78B' },
+  { name: 'Node.js', logo: 'https://cdn.simpleicons.org/nodedotjs/339933' },
+  { name: 'TypeScript', logo: 'https://cdn.simpleicons.org/typescript/3178C6' },
+  { name: 'Tailwind CSS', logo: 'https://cdn.simpleicons.org/tailwindcss/06B6D4' },
+  { name: 'PostgreSQL', logo: 'https://cdn.simpleicons.org/postgresql/4169E1' },
+  {
+    name: 'AWS',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+    wide: true
+  }
+];
+
 const WebDesignDev = () => {
   return (
     <section id="web-design-dev" className="py-24 bg-slate-950 relative overflow-hidden min-h-screen">
@@ -46,24 +63,72 @@ const WebDesignDev = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-6">Technologies We Use</h3>
-            <div className="space-y-4">
-              {[
-                { tech: 'React/Next', desc: 'Dynamic, interactive user interfaces' },
-                { tech: 'Node.js', desc: 'Robust server-side applications' },
-                { tech: 'Express.js/Fastify', desc: 'Fast, minimalist web framework' },
-                { tech: 'JavaScript/TypeScript', desc: 'Modern, maintainable code' },
-                { tech: 'Tailwind CSS', desc: 'Beautiful, responsive styling' },
-                { tech: 'Vite', desc: 'Lightning-fast build tool' },
-                { tech: 'PostgreSQL/MONGODB', desc: 'Reliable data management' },
-                { tech: 'Vercel/AWS', desc: 'Enterprise-grade hosting' }
-              ].map((item, idx) => (
-                <div key={idx} className="border-l-2 border-cyan-500 pl-4">
-                  <p className="text-white font-semibold">{item.tech}</p>
-                  <p className="text-gray-400 text-sm">{item.desc}</p>
+          <div className="relative overflow-hidden border border-cyan-500/25 rounded-2xl min-h-[430px] bg-slate-900/40">
+            <video
+              className="absolute inset-0 h-full w-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+            >
+              <source src="/videos/webly-tech.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-slate-950/70" />
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-950/45 to-cyan-950/35" />
+
+            <div className="relative z-10 p-6 sm:p-8 h-full flex flex-col">
+             
+              <h3 className="text-2xl font-bold text-white mb-2 tracking-wide">TOOLS WE USE</h3>
+              <p className="text-slate-100/85 text-sm mb-6 max-w-lg">
+                React, Next.js, Express.js, FastAPI, Django and the complete stack we use to build
+                fast, scalable products.
+              </p>
+
+              <div className="tools-marquee mb-5 bg-slate-900/55 backdrop-blur-sm" aria-label="Technology logos in motion">
+                <div className="tools-track">
+                  {[0, 1].map((copyIndex) => (
+                    <div
+                      key={copyIndex}
+                      className="tools-group"
+                      aria-hidden={copyIndex === 1}
+                    >
+                      {toolLogos.map((tool) => (
+                        <div
+                          key={`${tool.name}-${copyIndex}`}
+                          className="tools-logo-chip"
+                        >
+                          <img
+                            src={tool.logo}
+                            alt={`${tool.name} logo`}
+                            loading="lazy"
+                            className={tool.wide ? 'tools-logo-image tools-logo-image-wide' : 'tools-logo-image'}
+                          />
+                          <span>{tool.name}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-auto">
+                {[
+                  'Frontend: React / Next.js',
+                  'Backend: Express.js / FastAPI / Django',
+                  'Styling: Tailwind CSS',
+                  'Data & Cloud: PostgreSQL / AWS'
+                ].map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="group border border-cyan-400/25 rounded-xl bg-slate-950/55 px-4 py-3 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/70 hover:bg-slate-900/85 hover:shadow-[0_10px_28px_rgba(34,211,238,0.2)]"
+                  >
+                    <p className="text-cyan-50 text-sm font-medium transition-colors duration-300 group-hover:text-white">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

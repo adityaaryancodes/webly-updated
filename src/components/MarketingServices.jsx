@@ -50,7 +50,7 @@ const MarketingServices = () => {
 
           <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-6">Channels We Master</h3>
-            <div className="space-y-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 { channel: 'Google Ads', desc: 'Target high-intent customers' },
                 { channel: 'Facebook & Instagram', desc: 'Audience targeting & retargeting' },
@@ -59,9 +59,16 @@ const MarketingServices = () => {
                 { channel: 'Email', desc: 'Direct customer engagement' },
                 { channel: 'TikTok & YouTube', desc: 'Video marketing campaigns' }
               ].map((item, idx) => (
-                <div key={idx} className="border-l-2 border-green-500 pl-4">
-                  <p className="text-white font-semibold">{item.channel}</p>
-                  <p className="text-gray-400 text-sm">{item.desc}</p>
+                <div
+                  key={idx}
+                  className="group rounded-xl border border-green-400/25 bg-slate-950/55 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-green-300/70 hover:bg-slate-900/85 hover:shadow-[0_10px_24px_rgba(34,197,94,0.22)]"
+                >
+                  <p className="text-white font-semibold transition-colors duration-300 group-hover:text-green-100">
+                    {item.channel}
+                  </p>
+                  <p className="text-gray-400 text-sm mt-1 transition-colors duration-300 group-hover:text-gray-300">
+                    {item.desc}
+                  </p>
                 </div>
               ))}
             </div>

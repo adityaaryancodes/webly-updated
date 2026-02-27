@@ -50,7 +50,7 @@ const BrandManagement = () => {
 
           <div className="bg-gradient-to-br from-pink-500/10 to-rose-500/10 border border-pink-500/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-6">Design Elements</h3>
-            <div className="space-y-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 { element: 'Logo Design', desc: 'Unique, memorable, timeless' },
                 { element: 'Color Strategy', desc: 'Psychology-based color systems' },
@@ -59,9 +59,16 @@ const BrandManagement = () => {
                 { element: 'UI/UX Design', desc: 'Consistent digital experience' },
                 { element: 'Motion Design', desc: 'Animated brand elements' }
               ].map((item, idx) => (
-                <div key={idx} className="border-l-2 border-pink-500 pl-4">
-                  <p className="text-white font-semibold">{item.element}</p>
-                  <p className="text-gray-400 text-sm">{item.desc}</p>
+                <div
+                  key={idx}
+                  className="group rounded-xl border border-pink-400/25 bg-slate-950/55 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-pink-300/70 hover:bg-slate-900/85 hover:shadow-[0_10px_24px_rgba(236,72,153,0.24)]"
+                >
+                  <p className="text-white font-semibold transition-colors duration-300 group-hover:text-pink-100">
+                    {item.element}
+                  </p>
+                  <p className="text-gray-400 text-sm mt-1 transition-colors duration-300 group-hover:text-gray-300">
+                    {item.desc}
+                  </p>
                 </div>
               ))}
             </div>

@@ -48,7 +48,7 @@ const AppDevelopment = () => {
 
           <div className="bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-6">Platforms & Tools</h3>
-            <div className="space-y-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 { tech: 'Swift', desc: 'Native iOS development' },
                 { tech: 'Kotlin', desc: 'Native Android development' },
@@ -57,9 +57,16 @@ const AppDevelopment = () => {
                 { tech: 'Firebase', desc: 'Backend & real-time database' },
                 { tech: 'CI/CD Pipeline', desc: 'Automated testing & deployment' }
               ].map((item, idx) => (
-                <div key={idx} className="border-l-2 border-blue-500 pl-4">
-                  <p className="text-white font-semibold">{item.tech}</p>
-                  <p className="text-gray-400 text-sm">{item.desc}</p>
+                <div
+                  key={idx}
+                  className="group rounded-xl border border-blue-400/25 bg-slate-950/55 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300/70 hover:bg-slate-900/85 hover:shadow-[0_10px_24px_rgba(59,130,246,0.22)]"
+                >
+                  <p className="text-white font-semibold transition-colors duration-300 group-hover:text-blue-100">
+                    {item.tech}
+                  </p>
+                  <p className="text-gray-400 text-sm mt-1 transition-colors duration-300 group-hover:text-gray-300">
+                    {item.desc}
+                  </p>
                 </div>
               ))}
             </div>
